@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca1.temperatureapp.MainActivity">
+
+
+    <EditText
+        android:id="@+id/inputField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:layout_marginTop="80dp"
+        android:ems="8"
+        android:layout_centerHorizontal="true"
+        />
+
+<RadioGroup
+    android:id="@+id/conversionGroup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/inputField"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="40dp"
+    >
+    <RadioButton
+        android:id="@+id/celsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/celsius"
+        />
+    <RadioButton
+        android:id="@+id/fahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fahrenheit"
+        />
+</RadioGroup>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conversionGroup"
+        android:layout_centerHorizontal="true"
+        android:text="@string/convert"
+        android:layout_marginTop="20dp"
+        android:onClick="convert"
+        />
+
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calculateButton"
+        android:textSize="36dp"
+        android:text="ouput"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
