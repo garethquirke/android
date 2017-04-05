@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca1.lotteryapp.MainActivity">
+
+
+    <TextView
+        android:text="Lottery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <Button
+        android:text="Generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/results"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:onClick="generate"
+        android:id="@+id/generateButton" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:id="@+id/results"
+        android:textSize="24dp"
+        android:text="gg"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_green_light" />
+
+
+</RelativeLayout>
