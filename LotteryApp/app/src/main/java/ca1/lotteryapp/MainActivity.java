@@ -8,15 +8,11 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    ArrayList<Integer> numbers;
-    Random randomGenerator;
-    boolean exsists;
-    int newNumber;
 
 
 
@@ -24,10 +20,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        randomGenerator = new Random();
-        numbers = new ArrayList<Integer>();
     }
 
 
@@ -46,7 +38,15 @@ public class MainActivity extends AppCompatActivity {
             lotteryNumbers.add(num);
             numbers.remove(num);
         }
+        for(int i = 0; i < lotteryNumbers.size() - 1; i++){
+            if(lotteryNumbers.get(i) > lotteryNumbers.get(i + 1)){
+                int temp = lotteryNumbers.get(i);
+                lotteryNumbers.set(i, lotteryNumbers.get(i + 1));
+                lotteryNumbers.set(i + 1, temp);
+            }
+        }
 
+        Collections.sort(lotteryNumbers);
         String result = "";
         for(int i = 0; i < lotteryNumbers.size(); i++){
             result+= lotteryNumbers.get(i).toString() + ",";
