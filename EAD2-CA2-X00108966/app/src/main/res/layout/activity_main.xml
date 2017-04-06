@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca1.ead2_ca2_x00108966.MainActivity">
+
+
+    <EditText
+        android:id="@+id/input"
+        android:hint="API Level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:ems="4"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/input"
+        android:text="@string/submit"
+        android:onClick="submit"
+        />
+
+    <TextView
+        android:id="@+id/codeNameOuput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submitButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        />
+
+    <TextView
+        android:id="@+id/platformversionOuput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/codeNameOuput"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        />
+
+    <TextView
+        android:id="@+id/apiLevelOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/platformversionOuput"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        />
+
+    <TextView
+        android:id="@+id/yearOuput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/apiLevelOutput"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        />
+
+
+
+
+
+
+</RelativeLayout>
